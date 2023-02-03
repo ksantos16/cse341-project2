@@ -87,7 +87,7 @@ const deleteToDo = async (req,res,next) => {
   .getDb()
   .db('CSE341')
   .collection('todos')
-  .replaceOne({ _id: userId }, todo);
+  .replaceOne({ _id: userId });
   console.log(response);
   if (response.modifiedCount > 0) {
     res.status(204).send();
