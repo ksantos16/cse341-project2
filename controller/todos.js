@@ -74,15 +74,15 @@ const updateToDo = async (req,res,next) => {
 
 const deleteToDo = async (req,res,next) => {
   const userId = new ObjectId(req.params.id);
-  const todo = {
-    todaysDate: req.body.todaysDate,
-    task: req.body.task,
-    dueDate: req.body.dueDate,
-    class: req.body.class,
-    appointment: req.body.appointment,
-    activities: req.body.activities,
-    notes: req.body.notes
-    };
+  // const todo = {
+  //   todaysDate: req.body.todaysDate,
+  //   task: req.body.task,
+  //   dueDate: req.body.dueDate,
+  //   class: req.body.class,
+  //   appointment: req.body.appointment,
+  //   activities: req.body.activities,
+  //   notes: req.body.notes
+  //   };
   const response = await mongodb
   .getDb()
   .db('CSE341')
