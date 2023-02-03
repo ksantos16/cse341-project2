@@ -87,15 +87,14 @@ const deleteToDo = async (req,res,next) => {
   .getDb()
   .db('CSE341')
   .collection('todos')
-  .remove({ _id: userId });
+  .remove({ _id: userId }, true);
   console.log(response);
-  if (response.modifiedCount > 0) {
+  if (response.deletedCount > 0) {
     res.status(204).send();
   } else {
-    res.status(500).json(response.error || 'Some error occurred while updating the todo.');
+    res.status(500).json(response.error || 'Some error occurred while deleting the contact.');
   }
 };
-
 
 
 
