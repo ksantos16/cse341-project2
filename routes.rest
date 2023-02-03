@@ -37,10 +37,10 @@ content-type: application/json
 
 ###RENDER REQUEST
 ###
-GET https://cse341-activity1.onrender.com/todos
+GET https://cse341-project2-k61i.onrender.com/todos
 ###
 ###CREAT CONTACT (POST)
-POST  http://cse341-activity1.onrender.com/todos HTTP/1.1
+POST  https://cse341-project2-k61i.onrender.com/todos HTTP/1.1
 content-type: application/json
 
 {
@@ -53,7 +53,7 @@ content-type: application/json
     "notes": "wrk wrk wrk"
 }
 ###UPDATE CONTACT (PUT)
-PUT  http://cse341-activity1.onrender.com/todos/63dc70de6d0a4cd2630ecbe9 HTTP/1.1
+PUT  https://cse341-project2-k61i.onrender.com/todos/63dc70de6d0a4cd2630ecbe9 HTTP/1.1
 content-type: application/json
 
 {
@@ -66,4 +66,4 @@ content-type: application/json
     "notes": "rest update"
 }
 ###DELETE CONTACT (DELETE)
-DELETE   http://cse341-activity1.onrender.com/todos/63dc70de6d0a4cd2630ecbeb HTTP/1.1
+DELETE   https://cse341-project2-k61i.onrender.com/todos/63dc70de6d0a4cd2630ecbeb HTTP/1.1
