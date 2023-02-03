@@ -1,0 +1,61 @@
+###LOCALHOST REQUEST
+###
+GET http://localhost:8080/contacts
+###CREAT CONTACT (POST)
+POST  http://localhost:8080/contacts HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "Lolo",
+    "lastName": "Santos",
+    "email": "loloS@test.com",
+    "favoriteColor": "green",
+    "birthday": "05/07"
+}
+###UPDATE CONTACT (PUT)
+PUT  http://localhost:8080/contacts/63c0d44a0413db64b9f161a0 HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "Susanne",
+    "lastName": "Carver",
+    "email": "husucarverii@live.com",
+    "favoriteColor": "hot pink",
+    "birthday": "05/24"
+}
+###DELETE CONTACT (DELETE)
+DELETE   http://localhost:8080/contacts/63cc362c07cb4085aa7924c7 HTTP/1.1
+content-type: application/json
+###
+
+
+
+
+###RENDER REQUEST
+###
+GET https://cse341-activity1.onrender.com/contacts
+###
+###CREAT CONTACT (POST)
+POST  http://cse341-activity1.onrender.com/contacts HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "Lolo",
+    "lastName": "Santos",
+    "email": "loloS@test.com",
+    "favoriteColor": "green",
+    "birthday": "05/07"
+}
+###UPDATE CONTACT (PUT)
+PUT  http://cse341-activity1.onrender.com/contacts/63c0d44a0413db64b9f161a0 HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "Susanne",
+    "lastName": "Carver",
+    "email": "husucarverii@live.com",
+    "favoriteColor": "hot pink",
+    "birthday": "05/24"
+}
+###DELETE CONTACT (DELETE)
+DELETE   http://cse341-activity1.onrender.com/contacts/63cc362c07cb4085aa7924c7 HTTP/1.1
