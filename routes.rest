@@ -21,11 +21,11 @@ content-type: application/json
 
 
 ### PUT contact
-PUT http://localhost:8080/contacts/6220bcb39cd507e920c75a0b HTTP/1.1
+PUT http://localhost:8080/contacts/63c0d44a0413db64b9f161a0 HTTP/1.1
 content-type: application/json
 
 {
-    "firstName":"Sarah",
+    "firstName":"Okay",
     "lastName":"Birch",
     "email":"test@gmail.com",
     "favoriteColor":"Green",
