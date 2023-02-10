@@ -14,17 +14,19 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.18.3",
+    "body-parser": "^1.20.1",
     "dotenv": "^16.0.0",
     "express": "^4.16.3",
     "mongodb": "^4.4.0",
-    "swagger-ui-express": "^4.3.0"
+    "swagger-ui-express": "^4.3.0",
+    "validator": "^13.9.0",
+    "validatorjs": "^3.22.1"
   },
   "devDependencies": {
     "eslint": "^8.10.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "nodemon": "^1.18.4",
+    "nodemon": "^2.0.20",
     "prettier": "^2.5.1",
     "swagger-autogen": "^2.19.0"
   }
