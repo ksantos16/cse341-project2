@@ -3,8 +3,7 @@ const bodyParser = require('body-parser');
 const mongodb = require('./db/connect');
 const dotenv = require('dotenv');
 dotenv.config();
-const { auth } = require('express-openid-connect');
-const { requiresAuth } = require('express-openid-connect');
+const { auth, requiresAuth } = require('express-openid-connect');
 
 const port = process.env.PORT || 8080;
 
