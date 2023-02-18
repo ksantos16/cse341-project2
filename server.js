@@ -1,10 +1,25 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongodb = require('./db/connect');
+const dotenv = require('dotenv');
+dotenv.config();
+const { auth } = require('express-openid-connect');
 
 const port = process.env.PORT || 8080;
+
+const config = {
+  authRequired: false,
+  auth0Logout: true,
+  secret: process.env.secret,
+  baseURL: process.env.baseURL,
+  clientID: process.env.clientID,
+  issuerBaseURL: process.env.issuerBaseURL
+};
+
 const app = express();
 
+// auth router attaches /login, /logout, and /callback routes to the baseURL
+app.use(auth(config));
 
 app
   .use(bodyParser.json())
@@ -13,7 +28,6 @@ app
     next();
   })
   .use('/', require('./routes/index'));
-
 mongodb.initDb((err) => {
   if (err) {
     console.log(err);
@@ -21,4 +35,8 @@ mongodb.initDb((err) => {
     app.listen(port);
     console.log(`Connected to DB and listening on ${port}`);
   }
+});
+
+app.get('/', (req, res) => {
+  res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
 });
