@@ -4,6 +4,7 @@ const mongodb = require('./db/connect');
 const dotenv = require('dotenv');
 dotenv.config();
 const { auth } = require('express-openid-connect');
+const { requiresAuth } = require('express-openid-connect');
 
 const port = process.env.PORT || 8080;
 
@@ -39,4 +40,10 @@ mongodb.initDb((err) => {
 
 app.get('/', (req, res) => {
   res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
+});
+
+const { requiresAuth } = require('express-openid-connect');
+
+app.get('/profile', requiresAuth(), (req, res) => {
+  res.send(JSON.stringify(req.oidc.user));
 });
